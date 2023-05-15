@@ -86,6 +86,8 @@ const TaskForm = ({ kisiler, submitFn }) => {
   // task ekleme
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(e.target.data)
+
     submitFn({
       ...formData,
       id: nanoid(5),

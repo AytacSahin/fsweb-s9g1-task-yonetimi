@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+
 
 const PeopleForm = ({ kisiler, submitFn }) => {
   const [isim, setIsim] = useState("");
@@ -20,6 +22,8 @@ const PeopleForm = ({ kisiler, submitFn }) => {
     e.preventDefault();
     submitFn(isim);
     setIsim("");
+    toast.success("Yeni isim eklendi!")
+
   }
 
   return (
